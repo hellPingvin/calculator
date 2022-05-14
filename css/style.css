@@ -1,0 +1,74 @@
+:root {
+  --color-grey: #7a7a7a;
+  --color-orange: #f26e16;
+  --color-darkGrey: #2e2e2e;
+  --color-text: #fff;
+  --color-bg: #000;
+}
+
+.calc {
+  display: grid;
+  width: 300px;
+  height: 600px;
+  border-radius: 20px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: 18px;
+  margin: 5px;
+  box-shadow: 4px 4px 4px var(--color-darkGrey);
+}
+
+.calc__screen {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1 / 5;
+  justify-content: end;
+  align-items: end;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.toolbar {
+  display: grid;
+  justify-content: space-between;
+  justify-items: center;
+  gap: 10px;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  cursor: pointer;
+  user-select: none;
+}
+
+.toolbar__btn {
+  width: 60px;
+  height: 60px;
+  background: var(--color-darkGrey);
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+
+}
+
+.toolbar__btn_ac,
+.toolbar__btn_plus-minus,
+.toolbar__btn_percent {
+  background: var(--color-grey);
+  color: var(--color-bg);
+  font-weight: 500;
+}
+
+.toolbar__btn_divide,
+.toolbar__btn_multiply,
+.toolbar__btn_minus,
+.toolbar__btn_plus,
+.toolbar__btn_equals {
+  background: var(--color-orange);
+  font-weight: bold;
+}
+
+.toolbar__btn_number_zero {
+  grid-column: 2 span;
+  width: 100%;
+  border-radius: 70px;
+}
